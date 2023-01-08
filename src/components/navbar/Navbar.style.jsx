@@ -30,6 +30,14 @@ export const Language = styled.span`
   cursor: pointer;
 `;
 
+export const Input = styled.input`
+  border: none;
+`;
+
+export const Logo = styled.h1`
+  font-weight: bold;
+`;
+
 export const SearchContainer = styled.div`
   border: 1px solid lightgray;
   display: flex;

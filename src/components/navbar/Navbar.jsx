@@ -5,7 +5,9 @@ import { Container,
   Left,
   Right,
   SearchContainer,
-  Language 
+  Language,
+  Logo,
+  Input 
 } from './Navbar.style';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -17,12 +19,11 @@ const Navbar = () => {
           <Left>
             <Language>EN</Language>
             <SearchContainer>
+              <Input />
               <SearchIcon />
-
             </SearchContainer>
-
           </Left>
-          <Center>center</Center>
+          <Center><Logo>Online Shopping</Logo></Center>
           <Right>right</Right>
         </Wrapper>
       </Container>
