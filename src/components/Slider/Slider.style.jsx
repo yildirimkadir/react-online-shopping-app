@@ -24,19 +24,24 @@ export const Arrow = styled.div`
   margin: auto;
   left: ${props => props.direction === "left" && "15px"}; // ternory with "?" and ":" does not work
   right: ${props => props.direction === "right" && "15px"};
-  opacity: 0.5;
+  opacity: 0.7;
+  z-index: 5;
 `;
 
 export const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transition: all 1.5s ease;
+  transform: translateX(${props=> props.sliderIndex * -100}vw);
 `;
 export const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: #${props => props.bg};
 `;
+
 export const ImgContainer = styled.div`
   flex: 1;
   height: 100%;

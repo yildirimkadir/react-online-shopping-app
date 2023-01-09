@@ -1,50 +1,46 @@
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Container, Arrow, Slide, ImgContainer, InfoContainer, Img, Wrapper, Title, Button, Desc } from './Slider.style';
-
+import {sliders} from "../../helpers/data"
+import { useState } from 'react';
 
 const Slider = () => {
+    const [sliderIndex, setSliderIndex] = useState(0);
+
+    const handleClick = (direction) => {
+        if(direction === "left") {
+            setSliderIndex(sliderIndex > 0 ?  sliderIndex - 1 : 2)
+        } else {
+            setSliderIndex(sliderIndex < 2 ? sliderIndex + 1 : 0 )
+        }
+    }
+
+
+console.log(sliders)
   return (
     <Container>
-        <Arrow direction="left">
+        <Arrow direction="left" onClick={()=>handleClick("left")}>
             <KeyboardDoubleArrowLeftIcon />
         </Arrow>
-        <Wrapper>
-            <Slide>
+        <Wrapper sliderIndex={sliderIndex}>
+            {sliders.map((item) => (
+                <div key={item.id}>
+                <Slide bg={item.bg}>
                 <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>FASHION TRENDS TO BUY BEFORE THE SEASON! 30% NEW ARRIVALS.</Desc>
+                    <Title>{item.title}</Title>
+                    <Desc>{item.desc}</Desc>
                     <Button>SHOW NOW</Button>
                 </InfoContainer>
                 <ImgContainer>
-                  <Img src="https://cdn.pixabay.com/photo/2017/09/17/15/42/model-2758787_960_720.jpg"/>
+                  <Img src={item.img}/>
                 </ImgContainer>
-            </Slide>
-            <Slide>
-                <ImgContainer>
-                  <Img src="https://cdn.pixabay.com/photo/2020/07/13/13/00/dress-5400691_960_720.jpg"/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>FASHION TRENDS TO BUY BEFORE THE SEASON! 30% NEW ARRIVALS.</Desc>
-                    <Button>SHOW</Button>
-                </InfoContainer>
-            </Slide>
-            <Slide>
-                <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>FASHION TRENDS TO BUY BEFORE THE SEASON! 30% NEW ARRIVALS.</Desc>
-                    <Button>SHOW</Button>
-                </InfoContainer>
-                <ImgContainer>
-                  <Img src="https://cdn.pixabay.com/photo/2017/09/17/15/42/model-2758787_960_720.jpg"/>
-                </ImgContainer>
-            </Slide>
+               </Slide>
+            </div>
+            ))}
         </Wrapper>
-        <Arrow direction="right">
+        <Arrow direction="right" onClick={handleClick}>
             <KeyboardDoubleArrowRightIcon />
         </Arrow>
-
     </Container>
   )
 }
