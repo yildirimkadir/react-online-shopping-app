@@ -7,9 +7,12 @@ import { Container,
   SearchContainer,
   Language,
   Logo,
-  Input 
+  Input,
+  MenuItem 
 } from './Navbar.style';
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 
 const Navbar = () => {
   return (
@@ -20,11 +23,17 @@ const Navbar = () => {
             <Language>EN</Language>
             <SearchContainer>
               <Input />
-              <SearchIcon />
+              <SearchIcon style={{color: "gray", fontSize: 20}}/>
             </SearchContainer>
           </Left>
           <Center><Logo>Online Shopping</Logo></Center>
-          <Right>right</Right>
+          <Right>
+            <MenuItem>Register
+            </MenuItem>
+            <MenuItem>Login
+            </MenuItem>
+            <MenuItem><Badge badgeContent={4} color="primary"><ShoppingCartOutlinedIcon/></Badge></MenuItem>
+          </Right>
         </Wrapper>
       </Container>
     </div>

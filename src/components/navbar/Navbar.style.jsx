@@ -19,11 +19,21 @@ export const Left = styled.div`
 
 export const Center = styled.div`
   flex: 1;
+  text-align: center;
  `;
 
 export const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
  `;
+
+ export const MenuItem = styled.div`
+   font-size: 14;
+   cursor: pointer;
+   margin-right: 20px;
+   `;
 
 export const Language = styled.span`
   font-size: 15px;
