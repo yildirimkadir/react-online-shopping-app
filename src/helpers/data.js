@@ -41,3 +41,40 @@ export const categories = [
     },
 
 ]
+export const popularProducts = [
+    {
+        id: 1,
+        img: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+    },
+    {
+        id: 2,
+        img: "https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+    },
+    {
+        id: 3,
+        img: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 4,
+        img: "https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 5,
+        img: "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 6,
+        img: "https://images.pexels.com/photos/938006/pexels-photo-938006.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 7,
+        img: "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+        id: 8,
+        img: "https://images.pexels.com/photos/1625037/pexels-photo-1625037.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+
+]
