@@ -1,9 +1,11 @@
-import {Container, Left, Center, Right, SocialContainer, SocialIcon, Description, Logo, Title, ListItem, List} from "./Footer.style"
+import {Container, Left, Center, Right, SocialContainer, SocialIcon, Description, Logo, Title, ListItem, List, ContactItem} from "./Footer.style"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 
 const Footer = () => {
@@ -38,10 +40,16 @@ const Footer = () => {
                 <ListItem>My Account</ListItem>
                 <ListItem>Order Tracking</ListItem>
                 <ListItem>Wishlist</ListItem>
+                <ListItem>Wishlist</ListItem>
                 <ListItem>Terms</ListItem>
             </List>
         </Center>
-        <Right></Right>
+        <Right>
+            <Title>Contact</Title>
+            <ContactItem><LocationOnOutlinedIcon style={{marginRight:"5px"}}/>KaiserStr. 123, 50110 Cologne</ContactItem>
+            <ContactItem><LocalPhoneIcon style={{marginRight:"5px"}}/>+49 1234567890</ContactItem>
+            <ContactItem><MailOutlineIcon style={{marginRight:"10px"}}/>info@online-shopping.de</ContactItem>
+        </Right>
     </Container>
   )
 }
