@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 30px;
+  height: 35px;
   background-color: darkgoldenrod;
   color: #fff;
   display: flex;

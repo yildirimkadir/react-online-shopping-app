@@ -64,6 +64,6 @@ export const ContactItem = styled.div `
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  justify-content: center;
+ 
 `;
 

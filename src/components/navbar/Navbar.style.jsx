@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 60px;
+  height: 75px;
 `;
 
 export const Wrapper = styled.div`
