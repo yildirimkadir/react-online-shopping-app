@@ -1,16 +1,16 @@
 import './App.css';
 // import Login from './pages/Login/Login';
 // import Home from './pages/Home';
-import ProductList from './pages/ProductList/ProductList';
-// import Product from './pages/Product/Product';
+// import ProductList from './pages/ProductList/ProductList';
+import Product from './pages/Product/Product';
 // import Register from './pages/Register/Register';
 
 function App() {
   return (
     <div className="App">
       {/* <Home /> */}
-      <ProductList />
-      {/* <Product /> */}
+      {/* <ProductList /> */}
+      <Product />
       {/* <Register /> */}
       {/* <Login /> */}
     </div>
